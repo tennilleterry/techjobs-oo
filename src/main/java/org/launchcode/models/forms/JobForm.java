@@ -28,10 +28,28 @@ public class JobForm {
         Don't forget to add getters and setters
      */
 
+    @NotNull
+    private Location location;
+
+    @NotNull
+    private PositionType positionType;
+
+    @NotNull
+    private CoreCompetency coreCompetency;
+
+
     private ArrayList<Employer> employers;
     private ArrayList<Location> locations;
     private ArrayList<CoreCompetency> coreCompetencies;
     private ArrayList<PositionType> positionTypes;
+
+
+
+
+
+
+
+
 
     public JobForm() {
 
@@ -42,10 +60,14 @@ public class JobForm {
         */
 
         employers = jobData.getEmployers().findAll();
+        locations = jobData.getLocations().findAll();
+        coreCompetencies = jobData.getCoreCompetencies().findAll();
+        positionTypes = jobData.getPositionTypes().findAll();
 
     }
 
     public String getName() {
+
         return name;
     }
 
@@ -54,30 +76,72 @@ public class JobForm {
     }
 
     public int getEmployerId() {
+
         return employerId;
     }
 
     public void setEmployerId(int employerId) {
+
         this.employerId = employerId;
     }
 
+
+    public Location getLocation() {
+
+        return location;
+    }
+
+    public void setLocation(Location location) {
+
+        this.location = location;
+    }
+
+
+    public PositionType getPositionType() {
+
+        return positionType;
+
+    }
+
+    public void setPositionType(PositionType positionType) {
+
+        this.positionType = positionType;
+
+    }
+
+    public CoreCompetency getCoreCompetency() {
+
+        return coreCompetency;
+
+    }
+
+    public void setCoreCompetency(CoreCompetency coreCompetency) {
+
+        this.coreCompetency = coreCompetency;
+
+    }
     public ArrayList<Employer> getEmployers() {
+
         return employers;
     }
 
     public void setEmployers(ArrayList<Employer> employers) {
+
         this.employers = employers;
     }
 
     public ArrayList<Location> getLocations() {
+
         return locations;
     }
 
     public void setLocations(ArrayList<Location> locations) {
+
         this.locations = locations;
     }
 
     public ArrayList<CoreCompetency> getCoreCompetencies() {
+
         return coreCompetencies;
     }
 
@@ -86,10 +150,12 @@ public class JobForm {
     }
 
     public ArrayList<PositionType> getPositionTypes() {
+
         return positionTypes;
     }
 
     public void setPositionTypes(ArrayList<PositionType> positionTypes) {
+
         this.positionTypes = positionTypes;
     }
 }
